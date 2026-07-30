@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1 className="title">Prince's Theatre</h1>
+        <h1 className="title">Game Locker's Theatre</h1>
         <p className="subtitle">Classic Movies At Home</p>
         <p>
           Doggo ipsum borkf heckin good boys waggy wags he made many woofs
