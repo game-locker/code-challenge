@@ -1,20 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
+import mockCinemaWorldData from "./mockCinemaWorldData.json";
+import mockFilmWorldData from "./mockFilmWorldData.json";
+
+// The live challenge API is no longer available, so we serve the bundled
+// mock JSON files instead. Keyed by the provider slug used across the app.
+const mockData = {
+  cinemaworld: mockCinemaWorldData,
+  filmworld: mockFilmWorldData,
+};
 
 function useMovieAPI(provider) {
   return useQuery({
     queryKey: ["repoData" + provider],
     queryFn: async () => {
-      const response = await fetch(
-        `https://challenge.lexicondigital.com.au/api/v2/${provider}/movies`,
-        {
-          method: "GET",
-          headers: {
-            "x-api-key": "Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7",
-          },
-        }
-      );
-      const jsonData = await response.json();
-      return jsonData;
+      const data = mockData[provider];
+      if (!data) {
+        throw new Error(`No mock data for provider: ${provider}`);
+      }
+      return data;
     },
   });
 }

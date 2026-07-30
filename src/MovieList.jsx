@@ -2,8 +2,6 @@ import MovieCard from "./MovieCard";
 import "./MovieList.css";
 import ErrorCard from "./ErrorCard";
 import { getMovieArray } from "./utils";
-import mockCinemaWorldData from "./mockCinemaWorldData";
-import mockFilmWorldData from "./mockFilmWorldData";
 
 function MovieList({ apiData }) {
   const cinemaworldApi = apiData[0];
@@ -14,10 +12,6 @@ function MovieList({ apiData }) {
   apiArray.push(cinemaworldApi.data);
   apiArray.push(filmworldApi.data);
   const movies = getMovieArray(apiArray);
-  // const testArray = [];
-  // testArray.push(mockCinemaWorldData);
-  // testArray.push(mockFilmWorldData);
-  // const movies = getMovieArray(testArray);
   return (
     <div className="movie-list">
       {movies?.map((movie) => {
