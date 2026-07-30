@@ -1,0 +1,67 @@
+.movie-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+
+.poster {
+    width: 300px;
+}
+
+.movie-title {
+    font-size: 24px;
+    margin: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.movie-card-content{
+    display: flex;
+    background-color: #eeeeee;
+}
+
+.movie-card-header{
+    background-color: #ffffff;
+}
+
+.movie-card-details{
+    text-align: left;
+    padding: 12px;
+    padding-top: 0px;
+    min-width: 300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card-details-header {
+    display: flex;
+}
+
+.movie-card-provider-name {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.cheapest-price {
+    font-weight: bold;
+    font-size: 36px;
+    color: green;
+    margin: 0px;
+}
+
+.cheapest-name {
+    padding-left: 4px;
+    font-weight: bold;
+}
+
+.footer {
+    border-top: 3px solid black;
+    margin-top: 40px;
+}
+
+.provider-row {
+    display: flex;
+}
